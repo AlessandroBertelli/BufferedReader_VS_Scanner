@@ -25,13 +25,29 @@ public class readBuffer {
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
             String s;
-            s = br.readLine(); //1 1 1 1 1 
-            for (int j = 0; j < 5; j++) {
-                array[counter++] = Character.getNumericValue(s.charAt(j + 1));
+            
+            //leggo la riga
+            s = br.readLine();
+            
+            //creo array contenenti i singoli valori sottoforma di stringa
+            String[] numStr = s.split(" ");
+            
+            //converto ognuno dei cinque numeri memorizzati nella stringa in intero e li inserisco nell'array
+            for (int j = 0; j < 5; j++) {                
+                array[counter++] = Integer.parseInt(numStr[j]);
             }
             
         }
-        System.out.println("Il tempo di esecuzione con BufferReader è di: "+(System.currentTimeMillis()-startTime)/1000);
+        System.out.println("Il tempo di esecuzione con BufferReader è di: "+(System.currentTimeMillis()-startTime)+" ms");
     }
+    
+    public void stampaArray() {
+        
+        for (int i = 0; i <array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+    
+    
     
 }
