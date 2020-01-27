@@ -1,16 +1,15 @@
 package esercizioconfile;
 
+import java.io.File;
+import java.io.IOException;
+
 public class EsercizioConFile {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {       
         
-    }
-
-    public static void generaFile() {
+        generateFile gf = new generateFile();
+        gf.popolaFile();
         
-    }
-
-    public static void generaNumero() {
         
     }
 

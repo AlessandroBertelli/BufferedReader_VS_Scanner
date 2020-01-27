@@ -22,9 +22,11 @@ public class generateFile {
         
         for (int i = 0; i < 100000; i++) {
             String str = "";
+            
             for (int j = 0; j < 5; j++) {
-                str = generaNumero() + " ";
+                str += generaNumero() + " ";
             }
+            
             fw.write(str);
             fw.write(System.getProperty("line.separator"));
             fw.flush();
