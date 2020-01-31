@@ -23,20 +23,14 @@ public class readBuffer {
     
     public void leggiFile() throws IOException {
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
-            String s;
-            
-            //leggo la riga
-            s = br.readLine();
-            
-            //creo array contenenti i singoli valori sottoforma di stringa
-            String[] numStr = s.split(" ");
-            
-            //converto ognuno dei cinque numeri memorizzati nella stringa in intero e li inserisco nell'array
+        String s; 
+        String[] numStr;
+        for (int i = 0; i < 100000; i++) {                       
+            s = br.readLine();            
+            numStr = s.split(" ");            
             for (int j = 0; j < 5; j++) {                
                 array[counter++] = Integer.parseInt(numStr[j]);
-            }
-            
+            }            
         }
         System.out.println("Il tempo di esecuzione con BufferReader è di: "+(System.currentTimeMillis()-startTime)+" ms");
     }

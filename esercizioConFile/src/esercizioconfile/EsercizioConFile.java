@@ -13,7 +13,7 @@ public class EsercizioConFile {
         readBuffer rb = new readBuffer();
         rb.leggiFile();
         //rb.stampaArray();
-
+        
         readScanner rs = new readScanner();
         rs.leggiFile();
         //rs.stampaArray();

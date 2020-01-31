@@ -18,17 +18,14 @@ public class generateFile {
     
     public void popolaFile() throws IOException {
         
-        FileWriter fw = new FileWriter(file);
-        
+        FileWriter fw = new FileWriter(file);   
+        String str;
         for (int i = 0; i < 100000; i++) {
-            String str = "";
-            
+            str = "";           
             for (int j = 0; j < 5; j++) {
                 str += generaNumero() + " ";
-            }
-            
-            fw.write(str);
-            fw.write(System.getProperty("line.separator"));
+            }            
+            fw.write(str + System.getProperty("line.separator"));           
             fw.flush();
         }
         
